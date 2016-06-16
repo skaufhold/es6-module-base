@@ -1,3 +1,4 @@
+const WebpackNotifierPlugin = require('webpack-notifier');
 
 let config = {
   entry: './src/index.js',
@@ -21,6 +22,9 @@ if (process.env.npm_lifecycle_event === 'build') {
 } else {
   config = Object.assign(config, {
     devtool: 'source-map',
+    plugins: [
+      new WebpackNotifierPlugin({ excludeWarnings: true }),
+    ],
   });
 }
 
