@@ -5,7 +5,7 @@
   "repository": "https://github.com/skaufhold/es6-module-base",
   "main": "dist/bundle.js",
   "scripts": {
-    "build": "rm -rf dist && webpack -p",
+    "build": "rm -rf dist && webpack",
     "watch": "webpack --watch -d",
     "prepublish": "npm run build"
   },
